@@ -48,4 +48,6 @@ app.use("/api/users", usersRoute);
 app.use("/api/posts", postRoute)
 app.use("/api/categories", categoryRoute)
 
-app.listen('3001',()=> console.log('server is running'));
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`app is running on port ${process.env.PORT}`);
+});
